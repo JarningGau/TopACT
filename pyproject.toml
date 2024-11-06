@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "topact"
+version = "1.1.0"
+description = ""
+authors = ["Katherine Benjamin <katherine.benjamin@maths.ox.ac.uk>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+scipy = "^1.8"
+numpy = "^1.21.4"
+pandas = "^1.3.4"
+scikit-learn = "^1.0.1"
+py-find-1st = "^1.1.5"
+scikit-image = "^0.19.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+hypothesis = "^6.35.1"
+Sphinx = "^4.4.0"
+sphinx-rtd-theme = "^1.0.0"
+pyperf = "^2.3.1"
+pytest-cov = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+sphinx-rtd-theme = "^1.1.1"
+sphinx-autoapi = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = "ignore:.*distutils:DeprecationWarning"

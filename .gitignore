@@ -1,0 +1,13 @@
+# Specify filepatterns you want git to ignore.
+
+.hypothesis/**
+data/**
+*.csv
+docs/**
+notebooks/**
+images/**
+*.pyc
+*.json
+*.mtx
+.DS_Store
+docs/_build/

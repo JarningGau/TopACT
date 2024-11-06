@@ -457,7 +457,9 @@ class CountGrid(CountTable):
         for _ in range(num_proc):
             job_queue.put(None)
 
-        for msg_index in range(num_spots + num_proc):
+        from tqdm import tqdm
+        n_tasks = num_spots + num_proc
+        for msg_index in tqdm(range(n_tasks), total=n_tasks, desc="Processing spots"):
             res = res_queue.get()
             if res:
                 i, j, probs = res
